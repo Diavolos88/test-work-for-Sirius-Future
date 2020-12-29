@@ -12,8 +12,8 @@ const Elem = ({value, img}: elemPropsType) => {
     return (
         <div className={s.elem}>
             <div className={s[img]}/>
-            <Link href={`/${value}`}>
-                <li>{value}</li>
+            <Link href={`#`}>
+                <li className={s.pointerLine}><a>{value}</a></li>
             </Link>
         </div>
     )

@@ -1,10 +1,9 @@
 import s from './graph.module.css'
-import {Area, AreaChart, CartesianGrid, Line, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
-import React from 'react'
+import {Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
+import React, {useState} from 'react'
 import {updateFirstAC} from "../../redux/firstGraphReduser";
 import {connect} from 'react-redux';
 import {RootStoreType} from '../../redux/redux';
-import {bool, number} from "prop-types";
 
 
 type MyGraphType = {
@@ -14,19 +13,44 @@ type MyGraphType = {
     company: string
 }
 
-export default function MyGraph({name1, name2, name3, company}: MyGraphType) {
+type StateType = Array<{
+    name: string,
+    nameHover: string,
+    hmValues: number
+}>
+
+export default function MyGraph<StateType>({
+                                               name1,
+                                               name2,
+                                               name3,
+                                               company
+                                           }: React.PropsWithChildren<MyGraphType>): JSX.Element {
+    let [data, setData] = useState({
+        name: "час",
+        nameHover: "час",
+        hmValues: 24
+    })
     return (
         <div className={s.field}>
-            <button>{name1}</button>
-            <button>{name2}</button>
-            <button>{name3}</button>
-            <GraphContainer company={company}/>
+            <button onClick={() => {
+                setData({name: "час", nameHover: "час", hmValues: 24})
+            }}>{name1}</button>
+            <button onClick={() => {
+                setData({name: "день", nameHover: "день", hmValues: 7})
+            }}>{name2}</button>
+            <button onClick={() => {
+                setData({name: "сен", nameHover: "сентября", hmValues: 29})
+            }}>{name3}</button>
+            <GraphContainer company={company} name={data.name} nameHover={data.nameHover} hmValues={data.hmValues}/>
         </div>
     )
 }
 
 interface Props {
-    company: string;
+    company: string,
+    hmValues: number,
+    name: string,
+    nameHover: string
 }
 
 interface State {
@@ -49,10 +73,10 @@ class Graph extends React.Component<Props, State> {
         super(props);
     }
 
-    createDates() {
+    createDates(num: number) {
         const now = new Date();
         // @ts-ignore
-        return [...Array(now.getDate() + 1).keys()];
+        return [...Array(num).keys()];
     }
 
     createValues(dates: Array<number>) {
@@ -78,7 +102,8 @@ class Graph extends React.Component<Props, State> {
     }
 
     render() {
-        let dates = this.createDates().slice(1);
+
+        let dates = this.createDates(this.props.hmValues).slice(1);
         let data = this.createValues(dates);
         let fullMany = 0
         data.forEach((e) => {
@@ -111,7 +136,7 @@ class Graph extends React.Component<Props, State> {
                                 <stop offset="95%" stopColor="#8884d8" stopOpacity={0.0}/>
                             </linearGradient>
                         </defs>
-                        <XAxis dataKey="date" unit='сен'/>
+                        <XAxis dataKey="date" unit={this.props.name}/>
                         <YAxis unit='тыс. ₽'/>
                         <CartesianGrid vertical={false} strokeDashArray="3 3"/>
                         <Tooltip
@@ -121,8 +146,8 @@ class Graph extends React.Component<Props, State> {
                             formatter={function (value, name) {
                                 return `${value} тыс. ₽`;
                             }}
-                            labelFormatter={function (value) {
-                                return `Выручка за ${value} сентября`;
+                            labelFormatter={(value) => {
+                                return `Выручка за ${value} ${this.props.nameHover}`;
                             }}
                         />
                         <Area
