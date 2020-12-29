@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { combineReducers, createStore } from \"redux\";\nimport firstGraphReduser from \"./firstGraphReduser\";\nexport const reducers = combineReducers({\n  firstGraph: firstGraphReduser\n});\nconst store = createStore(reducers);\nexport default store;","map":null,"metadata":{},"sourceType":"module"}
