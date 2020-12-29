@@ -1,10 +1,151 @@
-.fullBox {
-    height: 100vh;
-    background: #0070f3;
+.leftBar {
+    height: 100%;
     width: 210px;
+    background: #ffffff;
 }
 
-.fullBox__logo img{
-    width: 40px;
-    height: 40px;
+.imgDivEtry {
+    padding-right: 15px;
+    margin-left: auto;
+    background: url("../../public/img/entry.png");
+    background-repeat: no-repeat;
+    height: 14px;
+    width: 14px;
+}
+
+.line {
+    padding-top: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.imgDiv {
+    margin: 0 auto;
+    background: url('../../public/img/logo.png');
+    background-repeat: no-repeat;
+    background-size: 120px 69px;
+    background-position: top;
+    width: 200px;
+    height: 69px;
+
+}
+
+.leftBar__img {
+    margin-top: 32px;
+    height: 200px;
+    color: #0C0B38
+}
+
+.leftBar__img img {
+    width: 46px;
+    height: 46px;
+}
+
+.leftBar__menu ul li {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.uchashiesia {
+    margin-left: 20px;
+    background: url("../../public/img/uchashiesia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    height: 15px;
+}
+
+.zaniatia {
+    background: url("../../public/img/zaniatia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    height: 15px;
+    margin-left: 20px;
+
+}
+
+.abonements {
+    background: url("../../public/img/abonements.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    height: 15px;
+    margin-left: 20px;
+
+}
+
+.crm {
+    background: url("../../public/img/crm.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    margin-left: 20px;
+
+    height: 15px;
+}
+
+.finansi {
+    background: url("../../public/img/finansi.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    margin-left: 20px;
+
+    height: 15px;
+}
+
+.otcheti {
+    background: url("../../public/img/otcheti.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    margin-left: 20px;
+
+    height: 15px;
+}
+
+.rassilki {
+    background: url("../../public/img/rassilki.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    margin-left: 20px;
+
+    height: 15px;
+}
+
+.treneri {
+    background: url("../../public/img/treneri.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    margin-left: 20px;
+
+    height: 15px;
+}
+
+.nastroiki {
+    background: url("../../public/img/nastroiki.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    height: 15px;
+    margin-left: 20px;
+
+}
+.elem {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    padding: 10px 0px;
+    margin-left: -20px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.elem:hover {
+    color: black;
+    background: #EDF0F5;
+    border-left: 3px #2E71F3 solid;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }

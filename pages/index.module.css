@@ -1,0 +1,158 @@
+.mainPage {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    background-color: #f1f0f0;
+}
+
+.topContent {
+    margin: 30px 30px 0px 22px;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+}
+
+.topContent input {
+    background-position-x: 25px;
+    background-position-y: 14px;
+    background-image: url('../public/img/inpuut.png');
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    border: none;
+    border-radius: 30px;
+    width: 500px;
+    height: 43px;
+    outline: none;
+}
+
+.topContent input:focus {
+    border-radius: 30px;
+    border: 1px grey solid;
+}
+
+.bels {
+    cursor: pointer;
+    margin-top: 15px;
+    background: url("../public/img/bels.png");
+    background-repeat: no-repeat;
+    width: 16pc;
+    height: 18px;
+}
+
+.user {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 40px 230px;
+}
+
+.userName {
+    cursor: pointer;
+    border-left: 1px #a5a4a4 solid;
+    margin: auto 0;
+    text-align: center;
+    filter: drop-shadow(0 0 3px rgba(28, 27, 27, 0.5));
+}
+
+.userPhoto {
+    background-repeat: no-repeat;
+    background: url("../public/img/userPhoto.png");
+    width: 45px;
+    height: 45px;
+}
+
+.namePhoto {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+}
+
+.graphs {
+    max-width: 340px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.bigCard {
+    background: white;
+    padding: 0px 10px 10px 10px;
+    cursor: pointer;
+}
+
+.bigCard:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.imgCard {
+    margin: auto auto;
+    width: 34px;
+    height: 29px;
+    background-image: url("./../public/img/bigCardImg.png");
+    background-repeat: no-repeat;
+}
+
+.topCardContentTmp {
+    padding-top: 5px;
+    background: white;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    cursor: pointer;
+}
+
+
+
+.cards {
+    padding-left: 25px;
+    padding-right: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+
+
+.cards ul {
+
+    margin-top: -5px;
+}
+
+.cards ul li {
+    padding-top: 5px;
+    font-size: 13px;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    list-style-type: none;
+    margin-top: -5px;
+}
+
+.cards ul li span {
+    color: black;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+.pointer {
+    background-image: url("../public/img/point.png");
+    color: rgba(0, 0, 0, 0.5);
+    background-position-y: 2px;
+}
+
+.numLi {
+}
+
+.withOutPoint {
+    background: white;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.seconColumn {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.lastCards {
+    padding-left: 25px;
+    padding-right: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}

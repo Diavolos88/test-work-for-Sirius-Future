@@ -1,0 +1,61 @@
+.topCard_text {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.topCard_number {
+    font-size: 24px;
+}
+
+.topCardContent {
+    padding-top: 5px;
+    background: white;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    cursor: pointer;
+}
+
+.topCardContent:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.doljniki {
+    margin: auto auto;
+    width: 34px;
+    height: 29px;
+    background-image: url("./../../public/img/doljniki.png");
+    background-repeat: no-repeat;
+}
+
+
+.forPay {
+    margin: auto auto;
+    width: 34px;
+    height: 29px;
+    background-image: url("./../../public/img/forPay.png");
+    background-repeat: no-repeat;
+}
+
+.withOutAbon {
+    margin: auto auto;
+    width: 34px;
+    height: 29px;
+    background-image: url("./../../public/img/withOutAbon.png");
+    background-repeat: no-repeat;
+}
+
+.howTrainers {
+    margin: auto auto;
+    width: 34px;
+    height: 29px;
+    background-image: url("./../../public/img/howTrainers.png");
+    background-repeat: no-repeat;
+}
+
+.toPayTomorrow {
+    margin: auto auto;
+    width: 35px;
+    height: 36px;
+    background-image: url("./../../public/img/toPayTomorrow.png");
+    background-repeat: no-repeat;
+}

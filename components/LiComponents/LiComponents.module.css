@@ -1,0 +1,12 @@
+
+.pointer {
+    background-image: url("./../../public/img/point.png");
+    color: rgba(0, 0, 0, 0.5);
+    background-position-y: 2px;
+}
+
+
+.withOutPoint {
+    background: white;
+    color: rgba(0, 0, 0, 0.5);
+}

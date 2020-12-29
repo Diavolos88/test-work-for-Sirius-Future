@@ -1,0 +1,26 @@
+.blueText {
+    padding-top: 15px;
+}
+
+.topCardContentBlue {
+    color: white;
+    font-size: 13px;
+    background: blue;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    cursor: pointer;
+}
+
+.topCardContentBlue:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.takeSth {
+    margin: auto auto;
+    width: 32px;
+    height: 33px;
+    background-image: url("./../../../public/img/takeSth.png");
+    background-repeat: no-repeat;
+}
+
