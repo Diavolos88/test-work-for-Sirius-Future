@@ -1,0 +1,10 @@
+.fullBox {
+    height: 100vh;
+    background: #0070f3;
+    width: 210px;
+}
+
+.fullBox__logo img{
+    width: 40px;
+    height: 40px;
+}
